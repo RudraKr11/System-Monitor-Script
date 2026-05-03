@@ -51,9 +51,9 @@ echo "--- ALERTS ---"
 DISK_USAGE=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')
 
 if [ "$DISK_USAGE" -gt 80 ]; then
-    echo "⚠️ Disk usage high: ${DISK_USAGE}%"
+    echo "Disk usage high: ${DISK_USAGE}%"
 else
-    echo "✅ Disk usage normal: ${DISK_USAGE}%"
+    echo "Disk usage normal: ${DISK_USAGE}%"
 fi
 
 echo ""
